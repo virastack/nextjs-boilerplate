@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
-import { createAuthSchema, type AuthFormValuesType } from "@/schemas/auth.schema";
+import { createAuthSchema, type AuthFormValues } from "@/schemas/auth.schema";
 
 import {
   Button,
@@ -22,7 +22,7 @@ export function AuthForm() {
   const tForm = useTranslations("AuthForm");
   const tSchema = useTranslations("AuthSchema");
 
-  const form = useForm<AuthFormValuesType>({
+  const form = useForm<AuthFormValues>({
     resolver: zodResolver(createAuthSchema(tSchema)),
     defaultValues: { username: "", password: "" }
   });

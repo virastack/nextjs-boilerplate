@@ -1,2 +1,2 @@
-export type { UserType } from "./user.type";
-export type { DataTablePropsType } from "./data-table.type";
+export type { User } from "./user";
+export type { DataTableProps } from "./data-table";

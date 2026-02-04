@@ -10,4 +10,4 @@ export function createAuthSchema(t: (key: string) => string) {
   });
 }
 
-export type AuthFormValuesType = z.infer<ReturnType<typeof createAuthSchema>>;
+export type AuthFormValues = z.infer<ReturnType<typeof createAuthSchema>>;

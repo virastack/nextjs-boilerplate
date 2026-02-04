@@ -1,6 +1,6 @@
 import type { Table } from "@tanstack/react-table";
 
-export interface DataTablePropsType<TData> {
+export interface DataTableProps<TData> {
   table: Table<TData>;
   isPending: boolean;
   globalFilter: string;

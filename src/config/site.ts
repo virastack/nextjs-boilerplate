@@ -1,9 +1,9 @@
-import type { SiteConfigType } from "@/types/site-config.type";
+import type { SiteConfig } from "@/types/site-config";
 import { DEFAULT_LOCALE } from "@/constants/i18n";
 import { env } from "@/env";
 
 // FIXME: Update site branding, default locale, theme color, social links, languages and OG image
-export const siteConfig: SiteConfigType = {
+export const siteConfig: SiteConfig = {
   name: "Nizam | Next.js 16 Boilerplate",
   description: "Production-ready Next.js 16+ starter built with Tailwind CSS 4 and TypeScript.",
   url: env.NEXT_PUBLIC_SITE_URL,
@@ -19,6 +19,7 @@ export const siteConfig: SiteConfigType = {
   ogImage: "/og.jpg",
   languages: {
     tr: "/tr",
-    en: "/en"
+    en: "/en",
+    "x-default": "/en"
   }
 } as const;

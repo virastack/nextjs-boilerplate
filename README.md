@@ -16,6 +16,7 @@ A production-ready **Next.js 16** boilerplate designed for scalability, performa
 - [Next.js 16](https://nextjs.org/) and [React 19](https://react.dev/) with App Router and concurrent rendering
 - [TypeScript 5](https://www.typescriptlang.org/) for full type safety
 - [Tailwind CSS v4](https://tailwindcss.com/) for scalable and fast styling
+- [shadcn/ui](https://ui.shadcn.com/) components for fully accessible, customizable, and owned UI primitives
 - [TanStack Query 5](https://tanstack.com/query/latest) for data fetching and caching
 - [Zustand](https://zustand-demo.pmnd.rs) for lightweight global state management
 - [Zod](https://zod.dev/) + [@t3-oss/env-nextjs](https://env.t3.gg) for runtime validation
@@ -25,9 +26,25 @@ A production-ready **Next.js 16** boilerplate designed for scalability, performa
 - [Google Analytics](https://analytics.google.com/) integration
 - [ESLint 9](https://eslint.org/), [Prettier 3](https://prettier.io/), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), and [Knip](https://knip.dev) for code quality
 - SEO-ready with metadata, sitemap, and robots.txt generation
+- **AI-ready**: `llms.txt` & `llms-full.txt` in `/public` plus `.cursor/rules` for LLM context and agent collaboration
 - Bundler Analyzer
 - Absolute Imports using `@` prefix
-- Maximize lighthouse score
+- Lighthouse Score: `100`
+
+## AI-Ready Architecture
+
+Nizam is fully aligned with 2026 AI-driven development standards. So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
+
+- **llms.txt & llms-full.txt**: These files live in the `/public` directory and provide LLMs with high-quality context about the project’s architecture and tech stack.
+- **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Nizam’s architectural conventions stay consistent.
+
+## Why No Auth or Testing?
+
+Nizam aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit Auth and Testing layers:
+
+- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.) or Testing (Vitest, Playwright). Nizam does not lock you into one choice; it gives you a clean foundation.
+- **Zero bloat**: The project stays lean and avoids dependencies you may never use.
+- **Fast start**: Skip unnecessary setup and focus on business logic from day one.
 
 ## Getting Started
 
@@ -76,7 +93,7 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 ## Project structure
 
 ```
-├── public/                             # Public assets folder
+├── public/                             # Public assets (llms.txt, llms-full.txt, static files)
 ├── src/
 │   ├── app/                            # App Router with locale support
 │   ├── assets/                         # Static and vector assets
@@ -104,7 +121,7 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 
 ## Tips & Recommendations
 
-- **Cursor rules (for Cursor users)**: This repository centralizes AI/editor collaboration rules in `.cursor/rules`. If you use Cursor, review this file and keep it aligned with the conventions in this README (naming, structure, types, a11y, styling).
+- **Cursor rules (for Cursor users)**: This repository centralizes AI/editor collaboration rules in `.cursor/rules`. For AI agents, see also **AI-Ready Architecture** above and the `llms.txt` / `llms-full.txt` files in `/public`. Keep rules aligned with the conventions in this README (naming, structure, types, a11y, styling).
 
 - **Cookies (server-side)**: Use Next.js App Router APIs for cookies.
   - `cookies()` from `next/headers` (read/write in server components/actions)
@@ -143,20 +160,20 @@ import { Button } from "@/ui";
 
 The following naming conventions are recommended for the project.
 
-| Type                               | Example                              | Style                        |
-| ---------------------------------- | ------------------------------------ | ---------------------------- |
-| Folders & base files               | `locale-switcher`, `query-client.ts` | kebab-case                   |
-| Components (widgets/layouts/pages) | `UserList.tsx`                       | PascalCase                   |
-| UI elements                        | `button.tsx`                         | kebab-case                   |
-| Helper / util files                | `format-currency.ts`                 | kebab-case                   |
-| Hook files                         | `use-users.ts`                       | kebab-case                   |
-| Hook functions                     | `useUsers`                           | camelCase (prefix `use`)     |
-| Datas                              | `user.data.ts`                       | kebab-case (suffix `.data`)  |
-| Stores                             | `counter.store.ts`                   | kebab-case (suffix `.store`) |
-| Icons                              | `ReactIcon`                          | PascalCase (suffix `Icon`)   |
-| Types & interfaces                 | `UserType`                           | PascalCase (suffix `Type`)   |
-| Type files                         | `user.type.ts`                       | kebab-case (suffix `.type`)  |
-| Constants                          | `DEFAULT_LOCALE`                     | SNAKE_CASE                   |
+| Type                               | Example                              | Style                         |
+| ---------------------------------- | ------------------------------------ | ----------------------------- |
+| Folders & base files               | `locale-switcher`, `query-client.ts` | kebab-case                    |
+| Components (widgets/layouts/pages) | `UserList.tsx`                       | PascalCase                    |
+| UI elements                        | `button.tsx`                         | kebab-case                    |
+| Helper / util files                | `format-currency.ts`                 | kebab-case                    |
+| Hook files                         | `use-users.ts`                       | kebab-case (prefix `use-`)    |
+| Hook functions                     | `useUsers`                           | camelCase (prefix `use`)      |
+| Data files                         | `user.ts`                            | kebab-case                    |
+| Store files                        | `counter.ts`                         | kebab-case                    |
+| Icons                              | `ReactIcon`                          | PascalCase (suffix `Icon`)    |
+| Types & interfaces                 | `User`, `SiteConfig`                 | PascalCase (no `Type` suffix) |
+| Type files                         | `user.ts`                            | kebab-case                    |
+| Constants                          | `DEFAULT_LOCALE`                     | SNAKE_CASE                    |
 
 ## Useful commands
 

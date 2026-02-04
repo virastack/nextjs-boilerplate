@@ -9,8 +9,8 @@
 ## TypeScript
 - The any type must not be used.
 - All type definitions must be located under src/types.
-- Type files must be written in kebab-case and end with .type.ts.
-- Type names must end with the suffix Type (e.g., UserType, FormType).
+- Type files must be written in kebab-case (e.g., user.ts, site-config.ts).
+- Type names use PascalCase without a Type suffix (e.g., User, SiteConfig). Prefer const user: User = over const user: UserType =.
 - Use interface for object shapes, and type for unions or advanced type compositions.
 
 ## Environment Variables
@@ -20,13 +20,13 @@
 
 ## Functions & Hooks
 - Custom hooks must always start with use (e.g., useUsers).
-- Custom hook files must live under src/hooks and be named in camelCase (e.g., useUsers.ts).
+- Custom hook files must live under src/hooks and be named in kebab-case (e.g., use-users.ts).
 - Hook function names must be written in camelCase.
 - Functions must have a single responsibility, kept simple and focused.
 
 ## State Management
 - Use Zustand for global state management.
-- Store files must live under src/stores, use kebab-case naming, and end with .store.ts (e.g., counter.store.ts).
+- Store files must live under src/stores and use kebab-case naming (e.g., counter.ts).
 - Store hooks must be named in the useXStore form (e.g., useCounterStore).
 
 ## Data Fetching
@@ -53,18 +53,18 @@
 - Helper and util files must be named in kebab-case (e.g., format-currency.ts).
 - Hook files must be kebab-case and start with use- (e.g., use-users.ts).
 - Hook function names must be camelCase and start with use (e.g., useUsers).
-- Data files must be kebab-case and end with .data.ts (e.g., user.data.ts).
-- Store files must be kebab-case and end with .store.ts (e.g., counter.store.ts).
+- Data files live under src/data and use kebab-case (e.g., user.ts, stack.ts).
+- Store files live under src/stores and use kebab-case (e.g., counter.ts).
 - Icon components must be PascalCase and end with Icon (e.g., ReactIcon).
-- Type and interface names must be PascalCase and end with Type (e.g., UserType).
-- Type files must be kebab-case and end with .type.ts (e.g., user.type.ts).
+- Type and interface names must be PascalCase without a Type suffix (e.g., User, SiteConfig).
+- Type files live under src/types and use kebab-case (e.g., user.ts, site-config.ts).
 - Constants must be written in SNAKE_CASE (e.g., DEFAULT_LOCALE).
 
 ## Utilities, Helpers & Constants
 - Reusable functions must be kept under src/utils.
 - Domain-specific or computation-focused functions must be under src/helpers.
 - Constants must be defined under src/constants and must not be kept inside components.
-- Static or mock data must be placed under src/data, and variable names must end with Data (e.g., userData, stackData).
+- Static or mock data must be placed under src/data; variable names may end with Data (e.g., stackData).
 
 ## Styling & Design
 - Tailwind CSS must be used exclusively.

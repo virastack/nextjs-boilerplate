@@ -17,7 +17,7 @@ import { useTranslations } from "next-intl";
 import { useUsers } from "@/hooks";
 
 import { Input, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/ui";
-import type { UserType } from "@/types";
+import type { User } from "@/types";
 
 export function UserList() {
   const { data = [], isPending, isError, error } = useUsers();
@@ -26,7 +26,7 @@ export function UserList() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [globalFilter, setGlobalFilter] = useState<string>("");
 
-  const columns = useMemo<ColumnDef<UserType>[]>(
+  const columns = useMemo<ColumnDef<User>[]>(
     () => [
       {
         accessorKey: "id",
@@ -64,7 +64,7 @@ export function UserList() {
 
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
-    data: (data as UserType[]) ?? [],
+    data: (data as User[]) ?? [],
     columns,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),

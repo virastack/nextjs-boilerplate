@@ -5,14 +5,14 @@ import { Balancer } from "react-wrap-balancer";
 
 import { Button } from "@/ui";
 
-type HeroType = {
+type HeroProps = {
   title: React.ReactNode;
   description: React.ReactNode;
   githubUrl: string;
   githubLabel: string;
 };
 
-export function Hero({ title, description, githubUrl, githubLabel }: HeroType) {
+export function Hero({ title, description, githubUrl, githubLabel }: HeroProps) {
   return (
     <div className="mt-20 flex flex-col items-center justify-center gap-6">
       <Balancer
