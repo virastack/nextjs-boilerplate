@@ -1,0 +1,48 @@
+---
+description: "USE WHEN: Defining HTTP requests, endpoints, and handling API responses."
+globs: "src/lib/api.ts,src/features/**/api/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# API Layer
+
+## Constraints
+
+- **Location:** Place all HTTP calls under `features/[feature]/api`.
+- **Validation:** Use Zod for Input/Output validation.
+- **Return Type:** Return typed data, not raw responses.
+- **Error Handling:** Normalize API errors to `AppError` format.
+- **Config:** Load `baseURL` from env. Use a single `axios` instance (`src/lib/api.ts`).
+- **Interceptors:** Manage Auth, locale, and tenant logic in interceptors.
+- **Naming:** `verb-entity.api.ts` (e.g., `get-users.api.ts`). Function: `getUsers`.
+- **SSR Safety:** Use only whitelisted internal URLs or absolute paths for server-to-server calls to prevent SSRF.
+
+## Bans
+
+- `fetch`/`axios` inside UI components.
+- `axios.create` inside features.
+- Cross-feature API imports.
+- Using untyped responses.
+- Hardcoded endpoint strings in queries.
+- Throwing raw errors.
+- Leaking internal error stack traces to the client or API responses.
+- Constructing dynamic URLs using unsanitized user inputs.
+
+## Correct Implementation
+
+<example>
+```ts
+export const getUsers = async (): Promise<User[]> => {
+  const { data } = await api.get("/users");
+  return UserSchema.array().parse(data);
+};
+```
+</example>
+
+## Incorrect Implementation
+
+<incorrect-example>
+```tsx
+useEffect(() => { axios.get("/users"); }, []);
+```
+</incorrect-example>

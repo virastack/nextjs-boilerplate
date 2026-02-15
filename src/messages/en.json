@@ -62,5 +62,11 @@
   "Showcase": {
     "title": "Showcase",
     "description": "A showcase of the features of the project."
+  },
+  "Error": {
+    "title": "Error",
+    "message": "Something went wrong!",
+    "retry": "Try again",
+    "goHome": "Go to home"
   }
 }

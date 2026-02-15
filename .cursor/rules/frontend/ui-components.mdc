@@ -1,0 +1,46 @@
+---
+description: "USE WHEN: Building UI components, structuring layouts, and applying styles using Tailwind CSS."
+globs: "src/components/**/*.{ts,tsx},src/features/**/components/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# UI Components
+
+## Constraints
+
+- **Hierarchy:** Organize by `ui` (stateless), `shared` (common), and `feature` (domain logic).
+- **Atomic:** Keep `src/components/ui` pure; forbid API/Store dependencies.
+- **Styling:** Use Tailwind CSS and `cn()`. Use Tokens instead of Hex/RGB values.
+- **Responsiveness:** Design mobile-first (e.g., `p-4 md:p-8`).
+- **Loading:** Use Skeletons matching actual dimensions to prevent CLS.
+- **A11y:** Enforce semantic HTML and `aria` attributes.
+- **Exports:** Use Named exports only.
+
+## Bans
+
+- Inline styles.
+- CSS Modules / styled-components.
+- Hex/RGB color usage (use Tokens).
+- Default exports.
+- Data fetching inside atomic components.
+- `div` soup (use Semantic tags).
+
+## Correct Implementation
+
+<example>
+```tsx
+export const ProfileCard = ({ name }: { name: string }) => (
+  <div className={cn("p-4", "bg-muted")}>{name}</div>
+);
+```
+</example>
+
+## Incorrect Implementation
+
+<incorrect-example>
+```tsx
+export default function Button() {
+  return <div style={{ color: "red" }}>Click</div>;
+}
+```
+</incorrect-example>

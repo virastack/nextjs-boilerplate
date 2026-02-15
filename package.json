@@ -25,6 +25,7 @@
     "lint:ci": "eslint . --ext js,ts,tsx --max-warnings=0 && prettier --check .",
     "prepare": "husky",
     "typecheck": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
     "commit": "cz"
   },
   "lint-staged": {

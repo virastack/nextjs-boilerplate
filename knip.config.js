@@ -4,7 +4,7 @@ const config = {
     "src/app/**/{page,layout,template,default,route,loading,not-found,error,global-error}.{ts,tsx}",
     "src/app/**/{sitemap,robots}.{ts,tsx}",
     "src/app/api/**/route.{ts,tsx}",
-    "src/proxy.{ts,js}",
+    "src/middleware.{ts,js}",
     "next.config.{js,ts,mjs,cjs}"
   ],
   project: ["src/**/*.{ts,tsx,js,jsx}"],

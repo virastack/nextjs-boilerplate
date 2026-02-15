@@ -6,7 +6,7 @@ import {
   parseISO
 } from "date-fns";
 
-import { DATE_PATTERN, DATEFNS_LOCALES, normalizeLocale } from "@/constants/date";
+import { DATE_PATTERN, DATEFNS_LOCALES, normalizeLocale } from "@/constants/date.constants";
 
 export const parseDate = (value?: string | null) => {
   if (!value) return null;

@@ -6,13 +6,13 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
-import { seoConfig } from "@/config/seo";
-import { siteConfig } from "@/config/site";
+import { seoConfig } from "@/config/seo.config";
+import { siteConfig } from "@/config/site.config";
 import { env } from "@/env";
 
 import { routing } from "@/i18n/routing";
 
-import { Footer, Header } from "@/layouts";
+import { Footer, Header } from "@/components/layout";
 import { Toaster } from "@/ui";
 import { Providers } from "@/providers";
 

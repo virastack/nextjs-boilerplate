@@ -62,5 +62,11 @@
   "Showcase": {
     "title": "Örnekler",
     "description": "Projenin özelliklerini gösteren örnekler."
+  },
+  "Error": {
+    "title": "Hata",
+    "message": "Bir şeyler yanlış gitti!",
+    "retry": "Yeniden dene",
+    "goHome": "Ana sayfaya dön"
   }
 }

@@ -1,0 +1,61 @@
+---
+description: "USE WHEN: Optimizing Core Web Vitals, managing assets, and ensuring high Lighthouse/A11y scores."
+globs: "src/app/**/*.{ts,tsx},src/routes/**/*.{ts,tsx},src/components/**/*.{ts,tsx},src/features/**/components/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Performance & Accessibility (Lighthouse 95+)
+
+## Constraints
+
+- **LCP Optimization:** Use `priority` attribute for the first visible `Image` (Next.js) or hero assets.
+- **Image Standards:** Always use `next/image` or framework-specific optimized loaders. Define explicit `width` and `height` to prevent CLS.
+- **Icon Strategy:** Use tree-shakable icons (e.g., `lucide-react`). Forbidden to import entire libraries.
+- **Font Loading:** Use `swap` display strategy. Optimize via `next/font` or local self-hosting.
+- **A11y SSOT:** All interactive elements MUST have `aria-label`, `role`, or associated `<label>`.
+- **Contrast:** Maintain WCAG AA compliance (4.5:1 ratio).
+- **Bundle Size:** Keep feature chunks <50kb. Use dynamic imports for heavy components (charts, editors).
+- **Asset Links:** Ref: `ui-components.mdc` for Skeleton/CLS rules.
+
+## Bans
+
+- **Layout Shift:** Forbidden to render content without reserved dimensions (use Skeletons).
+- **Native Img:** Forbidden to use raw `<img>` tags.
+- **Blocking JS:** Forbidden to use heavy 3rd party scripts in the main thread (use `next/script` or Web Workers).
+- **A11y Gaps:** Forbidden to use `div` as a button without `tabIndex` and `onKeyDown`.
+- **Alt Text:** Forbidden to leave `alt` attributes empty or generic (e.g., "image").
+
+## Correct Implementation
+
+<example>
+// Optimized LCP and A11y
+import Image from "next/image";
+
+export const Hero = () => (
+  <section>
+    <h1>{t("title")}</h1>
+    <Image 
+      src="/hero.webp" 
+      alt="Dashboard analytics overview" 
+      width={1200} 
+      height={600} 
+      priority 
+    />
+    <button aria-label="Start free trial" onClick={handleAction}>
+      {t("cta")}
+    </button>
+  </section>
+);
+</example>
+
+## Incorrect Implementation
+
+<incorrect-example>
+// BAN: Native img, no dimensions, no priority, no aria-label
+const BadHero = () => (
+  <div>
+    <img src="/hero.png" />
+    <div onClick={handleAction}>Click here</div>
+  </div>
+);
+</incorrect-example>

@@ -26,14 +26,19 @@ A production-ready **Next.js 16** boilerplate designed for scalability, performa
 - [Google Analytics](https://analytics.google.com/) integration
 - [ESLint 9](https://eslint.org/), [Prettier 3](https://prettier.io/), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), and [Knip](https://knip.dev) for code quality
 - SEO-ready with metadata, sitemap, and robots.txt generation
+- **Error Handling**: Built-in `error.tsx` and `global-error.tsx` with i18n support and graceful degradation
 - **AI-ready**: `llms.txt` & `llms-full.txt` in `/public` plus `.cursor/rules` for LLM context and agent collaboration
 - Bundler Analyzer
 - Absolute Imports using `@` prefix
 - Lighthouse Score: `100`
 
+## Built with Kaide
+
+Nizam is designed and powered by [Kaide](https://github.com/omergulcicek/kaide), an AI-native architecture kit for modern React. The governance layer that ships with Nizam—`.cursor/rules`, `docs/`, and `AGENTS.md`—is derived from Kaide and is included by default; no extra setup is required. For the upstream project, updates, or to use Kaide in other codebases, see the [Kaide repository](https://github.com/omergulcicek/kaide).
+
 ## AI-Ready Architecture
 
-Nizam is fully aligned with 2026 AI-driven development standards. So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
+Nizam is fully aligned with 2026 AI-driven development standards. It is built on [Kaide](https://github.com/omergulcicek/kaide) (see **Built with Kaide** above). So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
 
 - **llms.txt & llms-full.txt**: These files live in the `/public` directory and provide LLMs with high-quality context about the project’s architecture and tech stack.
 - **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Nizam’s architectural conventions stay consistent.
@@ -85,9 +90,9 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 - `src/env.ts`: environment variables schema (required/optional fields)
 - `src/app/robots.ts`: Robots.txt configuration for search engines
 - `src/app/sitemap.ts`: Dynamic sitemap generation for SEO
-- `src/config/site.ts`: site name, description, URL, social accounts, default locales
-- `src/config/seo.ts`: Metadata-based SEO settings (title, description, Open Graph, Twitter)
-- `src/constants/i18n.ts`: Localization settings (supported and default locales)
+- `src/config/site.config.ts`: site name, description, URL, social accounts, default locales
+- `src/config/seo.config.ts`: Metadata-based SEO settings (title, description, Open Graph, Twitter)
+- `src/constants/i18n.constants.ts`: Localization settings (supported and default locales)
 - `src/lib/api.ts`: Axios instance and request helpers based on `NEXT_PUBLIC_API_URL`
 
 ## Project structure
@@ -99,11 +104,12 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 │   ├── assets/                         # Static and vector assets
 │   ├── components/                     # UI and shared components
 │   │   ├── icons                       # Svg icons
-│   │   ├── layouts                     # Page structure (header, footer, sidebar)
-│   │   ├── ui                          # Atomic and reusable UI elements
-│   │   └── widgets                     # Advanced UI components
+│   │   ├── layout                      # Page structure (header, footer, sidebar)
+│   │   ├── shared                      # Shared domain components
+│   │   └── ui                          # Atomic and reusable UI elements
 │   ├── config/                         # Site and SEO configurations
 │   ├── constants/                      # Global constants (i18n, date, etc.)
+│   ├── features/                       # Feature-based modules
 │   ├── hooks/                          # Custom React hooks
 │   ├── i18n/                           # next-intl configurations
 │   ├── lib/                            # Utilities and API layer
@@ -113,7 +119,7 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 │   ├── stores/                         # Application-wide state management
 │   ├── styles/                         # Base styling and Tailwind setup
 │   ├── types/                          # TypeScript types and interfaces
-│   └── .env.ts                         # Environment validation
+│   └── env.ts                          # Environment validation
 ├── .prettierrc                         # Prettier setup with Tailwind and import sorting
 ├── next.config.ts                      # Next.js configuration
 └── tsconfig.json                       # TypeScript configuration
@@ -144,13 +150,12 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 ### Imports & Aliases
 
 - Prefer short aliases with barrel exports for consistency and readability:
-  - `@/ui`, `@/widgets`, `@/hooks`, `@/data`, `@/schemas`, `@/layouts`
+  - `@/ui`, `@/hooks`, `@/data`, `@/schemas`, `@/layout`
 - Example:
 
 ```ts
 import { useUsers } from "@/hooks";
 
-import { LocaleSwitcher } from "@/widgets";
 import { Button } from "@/ui";
 ```
 
@@ -168,12 +173,12 @@ The following naming conventions are recommended for the project.
 | Helper / util files                | `format-currency.ts`                 | kebab-case                    |
 | Hook files                         | `use-users.ts`                       | kebab-case (prefix `use-`)    |
 | Hook functions                     | `useUsers`                           | camelCase (prefix `use`)      |
-| Data files                         | `user.ts`                            | kebab-case                    |
-| Store files                        | `counter.ts`                         | kebab-case                    |
+| Data files                         | `user.data.ts`                       | kebab-case                    |
+| Store files                        | `counter.store.ts`                   | kebab-case                    |
 | Icons                              | `ReactIcon`                          | PascalCase (suffix `Icon`)    |
 | Types & interfaces                 | `User`, `SiteConfig`                 | PascalCase (no `Type` suffix) |
-| Type files                         | `user.ts`                            | kebab-case                    |
-| Constants                          | `DEFAULT_LOCALE`                     | SNAKE_CASE                    |
+| Type files                         | `user.types.ts`                      | kebab-case                    |
+| Constants                          | `i18n.constants.ts`                  | kebab-case                    |
 
 ## Useful commands
 

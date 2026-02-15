@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LOCALES, type LocaleCode } from "@/constants/i18n";
+import { DEFAULT_LOCALE, LOCALES, type LocaleCode } from "@/constants/i18n.constants";
 
 export const getLocaleLabel = (
   code: string,

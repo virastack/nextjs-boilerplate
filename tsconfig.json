@@ -21,17 +21,16 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/tailwind": ["./src/styles/tailwind.css"],
+      "@/features/*": ["./src/features/*"],
+      "@/components/layout": ["./src/components/layout"],
+      "@/components/layout/*": ["./src/components/layout/*"],
+      "@/components/shared": ["./src/components/shared"],
+      "@/components/shared/*": ["./src/components/shared/*"],
       "@/components/*": ["./src/components/*"],
-      "@/layouts": ["./src/components/layouts"],
-      "@/layouts/*": ["./src/components/layouts/*"],
-      "@/widgets": ["./src/components/widgets"],
-      "@/widgets/*": ["./src/components/widgets/*"],
       "@/ui": ["./src/components/ui"],
       "@/ui/*": ["./src/components/ui/*"],
       "@/hooks": ["./src/hooks"],
       "@/hooks/*": ["./src/hooks/*"],
-      "@/data": ["./src/data"],
-      "@/data/*": ["./src/data/*"],
       "@/schemas": ["./src/schemas"],
       "@/schemas/*": ["./src/schemas/*"],
       "@/stores/*": ["./src/stores/*"],
@@ -40,7 +39,8 @@
       "@/lib/*": ["./src/lib/*"],
       "@/providers/*": ["./src/providers/*"],
       "@/types/*": ["./src/types/*"],
-      "@/utils/*": ["./src/utils/*"]
+      "@/utils/*": ["./src/utils/*"],
+      "@/helpers/*": ["./src/helpers/*"]
     }
   },
   "include": [
