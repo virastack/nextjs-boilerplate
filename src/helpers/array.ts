@@ -9,15 +9,13 @@ export function sortBy<T>(arr: T[], key: keyof T, order: "asc" | "desc" = "asc")
 }
 
 export function groupBy<T>(arr: T[], key: keyof T): Record<string, T[]> {
-  return arr.reduce(
-    (acc, item) => {
-      const groupKey = String(item[key]);
-      acc[groupKey] = acc[groupKey] ?? [];
-      acc[groupKey].push(item);
-      return acc;
-    },
-    {} as Record<string, T[]>
-  );
+  const initial: Record<string, T[]> = {};
+  return arr.reduce((acc, item) => {
+    const groupKey = String(item[key]);
+    acc[groupKey] = acc[groupKey] ?? [];
+    acc[groupKey].push(item);
+    return acc;
+  }, initial);
 }
 
 export function uniqueArray<T>(arr: T[], key?: keyof T): T[] {

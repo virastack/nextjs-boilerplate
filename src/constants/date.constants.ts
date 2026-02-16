@@ -1,11 +1,13 @@
 import type { Locale } from "date-fns";
 import { enUS, tr } from "date-fns/locale";
 
-import { DEFAULT_LOCALE, LOCALES, type LocaleCode } from "@/constants/i18n.constants";
+import { DEFAULT_LOCALE, type LocaleCode } from "@/constants/i18n.constants";
+
+import { isLocaleCode } from "@/lib/locale";
 
 export const normalizeLocale = (loc?: string): LocaleCode => {
-  const base = (loc ?? DEFAULT_LOCALE).split("-")[0] as LocaleCode;
-  return base in LOCALES ? base : DEFAULT_LOCALE;
+  const base = (loc ?? DEFAULT_LOCALE).split("-")[0];
+  return isLocaleCode(base) ? base : DEFAULT_LOCALE;
 };
 
 export const DATEFNS_LOCALES: Partial<Record<LocaleCode, Locale>> = {

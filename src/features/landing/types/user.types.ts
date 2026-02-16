@@ -1,1 +1,1 @@
-export type { User } from "../schemas/user.schema";
+export type { User } from "@/features/landing/schemas/user.schema";

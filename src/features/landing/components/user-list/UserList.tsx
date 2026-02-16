@@ -30,32 +30,34 @@ export function UserList() {
       {
         accessorKey: "id",
         header: ({ column }) => (
-          <span
+          <button
+            type="button"
             className="flex cursor-pointer items-center gap-2 [&_svg]:size-4"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             {t("id")}
             <ArrowUpDown />
-          </span>
+          </button>
         )
       },
       {
         accessorKey: "name",
         header: ({ column }) => (
-          <span
+          <button
+            type="button"
             className="flex cursor-pointer items-center gap-2 [&_svg]:size-4"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             {t("name")}
             <ArrowUpDown />
-          </span>
+          </button>
         )
       },
       {
         accessorKey: "email",
         header: () => <span>{t("email")}</span>,
         enableSorting: false,
-        cell: ({ row }) => <div className="lowercase">{row.getValue("email") as string}</div>
+        cell: ({ row }) => <div className="lowercase">{row.getValue<string>("email")}</div>
       }
     ],
     [t]
@@ -68,7 +70,7 @@ export function UserList() {
    */
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
-    data: (data as User[]) ?? [],
+    data: data ?? [],
     columns,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
@@ -82,7 +84,7 @@ export function UserList() {
     return (
       <section className="mt-10">
         <div>
-          {t("error")}: {(error as Error).message}
+          {t("error")}: {error instanceof Error ? error.message : String(error)}
         </div>
       </section>
     );
