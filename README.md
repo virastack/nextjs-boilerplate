@@ -94,7 +94,7 @@ The variable schema is defined in `src/env.ts`.
 
 You can quickly tailor the Next.js Boilerplate to your needs by searching the project for `FIXME:` tags.
 
-- `.env`: runtime environment variables
+- `.env.example`: runtime environment variables
 - `src/env.ts`: environment variables schema (required/optional fields)
 - `src/app/robots.ts`: Robots.txt configuration for search engines
 - `src/app/sitemap.ts`: Dynamic sitemap generation for SEO
