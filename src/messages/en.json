@@ -1,6 +1,6 @@
 {
   "Dashboard": {
-    "title": "Nizam - Next.js 16 Boilerplate",
+    "title": "ViraStack - Next.js Boilerplate",
     "description": "Open-source boilerplate for modern Next.js applications, featuring <react>React</react>, <typescript>TypeScript</typescript>, <tailwind>Tailwind CSS</tailwind>, and <tanstack>TanStack Query</tanstack>. Includes reusable components, hooks, and utilities to speed up development.",
     "starOnGithub": "Star on Github",
     "deployToVercel": "Deploy to Vercel",

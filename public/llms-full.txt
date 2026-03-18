@@ -1,8 +1,8 @@
-# Nizam — Next.js 16 Boilerplate (Full)
+# ViraStack — Next.js 16 Boilerplate (Full)
 
 > Production-ready Next.js 16 + React 19 + Tailwind CSS v4 boilerplate designed for scalability, performance, and developer happiness. Minimal by design: no built-in Auth or Testing to keep the core flexible. Strong conventions, internationalization, and AI-native rules for reliable agent collaboration.
 
-Nizam provides a clean, scalable baseline for modern App Router projects:
+ViraStack - Next.js Boilerplate provides a clean, scalable baseline for modern App Router projects:
 
 - Next.js 16 with Server/Client Components, streaming, metadata, and file-system routing under `src/app/[locale]`
 - React 19 concurrency features
@@ -22,26 +22,26 @@ Important notes:
 - Shadcn UI primitives live under `src/components/ui` and should remain unmodified.
 
 ## Project Files
-- [`src/app/[locale]/layout.tsx`](https://github.com/omergulcicek/nizam/blob/main/src/app/%5Blocale%5D/layout.tsx): Root layout (required; wraps entire app)
-- [`src/app/[locale]/page.tsx`](https://github.com/omergulcicek/nizam/blob/main/src/app/%5Blocale%5D/page.tsx): Home page (Server Component by default)
-- [`src/app/not-found.tsx`](https://github.com/omergulcicek/nizam/blob/main/src/app/not-found.tsx): 404 boundary UI
-- [`src/app/robots.ts`](https://github.com/omergulcicek/nizam/blob/main/src/app/robots.ts): Robots file generation
-- [`src/app/sitemap.ts`](https://github.com/omergulcicek/nizam/blob/main/src/app/sitemap.ts): Sitemap generation
-- [`src/env.ts`](https://github.com/omergulcicek/nizam/blob/main/src/env.ts): Zod-validated env variables (single source of truth)
-- [`src/config/site.ts`](https://github.com/omergulcicek/nizam/blob/main/src/config/site.ts): Site identity, URLs, socials
-- [`src/config/seo.ts`](https://github.com/omergulcicek/nizam/blob/main/src/config/seo.ts): Metadata defaults (SEO, Open Graph)
-- [`src/lib/api.ts`](https://github.com/omergulcicek/nizam/blob/main/src/lib/api.ts): Axios instance and HTTP helpers
-- [`src/lib/query-client.ts`](https://github.com/omergulcicek/nizam/blob/main/src/lib/query-client.ts): TanStack Query client setup
-- [`src/hooks/use-users.ts`](https://github.com/omergulcicek/nizam/blob/main/src/hooks/use-users.ts): Example query hook pattern
-- [`src/i18n/routing.ts`](https://github.com/omergulcicek/nizam/blob/main/src/i18n/routing.ts): i18n-aware routing helpers
-- [`src/messages/en.json`](https://github.com/omergulcicek/nizam/blob/main/src/messages/en.json): English messages
-- [`src/messages/tr.json`](https://github.com/omergulcicek/nizam/blob/main/src/messages/tr.json): Turkish messages
-- [`src/providers/Providers.tsx`](https://github.com/omergulcicek/nizam/blob/main/src/providers/Providers.tsx): Theme/Query/Intl providers
-- [`src/components/ui`](https://github.com/omergulcicek/nizam/tree/main/src/components/ui): Shadcn UI primitives (do not modify)
-- [`src/components/widgets`](https://github.com/omergulcicek/nizam/tree/main/src/components/widgets): High-level UI (Hero, Dashboard, etc.)
-- [`src/styles/tailwind.css`](https://github.com/omergulcicek/nizam/blob/main/src/styles/tailwind.css): Tailwind v4 entry
-- [`.cursor/rules`](https://github.com/omergulcicek/nizam/blob/main/.cursor/rules): Rules for AI-native development
-- [`README.md`](https://github.com/omergulcicek/nizam/blob/main/README.md): Overview, structure, naming conventions
+- [`src/app/[locale]/layout.tsx`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/app/%5Blocale%5D/layout.tsx): Root layout (required; wraps entire app)
+- [`src/app/[locale]/page.tsx`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/app/%5Blocale%5D/page.tsx): Home page (Server Component by default)
+- [`src/app/not-found.tsx`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/app/not-found.tsx): 404 boundary UI
+- [`src/app/robots.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/app/robots.ts): Robots file generation
+- [`src/app/sitemap.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/app/sitemap.ts): Sitemap generation
+- [`src/env.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/env.ts): Zod-validated env variables (single source of truth)
+- [`src/config/site.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/config/site.ts): Site identity, URLs, socials
+- [`src/config/seo.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/config/seo.ts): Metadata defaults (SEO, Open Graph)
+- [`src/lib/api.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/lib/api.ts): Axios instance and HTTP helpers
+- [`src/lib/query-client.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/lib/query-client.ts): TanStack Query client setup
+- [`src/hooks/use-users.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/hooks/use-users.ts): Example query hook pattern
+- [`src/i18n/routing.ts`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/i18n/routing.ts): i18n-aware routing helpers
+- [`src/messages/en.json`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/messages/en.json): English messages
+- [`src/messages/tr.json`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/messages/tr.json): Turkish messages
+- [`src/providers/Providers.tsx`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/providers/Providers.tsx): Theme/Query/Intl providers
+- [`src/components/ui`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/components/ui): Shadcn UI primitives (do not modify)
+- [`src/components/widgets`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/components/widgets): High-level UI (Hero, Dashboard, etc.)
+- [`src/styles/tailwind.css`](https://github.com/virastack/nextjs-boilerplate/blob/main/src/styles/tailwind.css): Tailwind v4 entry
+- [`.cursor/rules`](https://github.com/virastack/nextjs-boilerplate/blob/main/.cursor/rules): Rules for AI-native development
+- [`README.md`](https://github.com/virastack/nextjs-boilerplate/blob/main/README.md): Overview, structure, naming conventions
 
 ## Next.js (Core References)
 - [Getting Started](https://nextjs.org/docs/app/getting-started)
@@ -72,7 +72,7 @@ Important notes:
 ## Internationalization
 - [Internationalization (App Router)](https://nextjs.org/docs/app/guides/internationalization)
 - [next-intl docs](https://next-intl-docs.vercel.app/)
-- Nizam uses locale segments under `src/app/[locale]` and JSON message catalogs under `src/messages/`.
+- ViraStack - Next.js Boilerplate uses locale segments under `src/app/[locale]` and JSON message catalogs under `src/messages/`.
 
 ## Styling
 - [Tailwind CSS v4](https://tailwindcss.com/)
@@ -94,9 +94,9 @@ Important notes:
 - For agents: read `.cursor/rules` before edits; do not modify `src/components/ui`.
 
 ## Optional
-- [`src/components/layouts`](https://github.com/omergulcicek/nizam/tree/main/src/components/layouts): Header/Footer building blocks
-- [`src/constants`](https://github.com/omergulcicek/nizam/tree/main/src/constants): Constants (e.g., locales, dates)
-- [`src/lib/helpers`](https://github.com/omergulcicek/nizam/tree/main/src/lib/helpers): Helper functions
-- [`src/types`](https://github.com/omergulcicek/nizam/tree/main/src/types): Shared type declarations (PascalCase, no Type suffix: User, SiteConfig)
-- [`src/data`](https://github.com/omergulcicek/nizam/tree/main/src/data): Static sample data
+- [`src/components/layouts`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/components/layouts): Header/Footer building blocks
+- [`src/constants`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/constants): Constants (e.g., locales, dates)
+- [`src/lib/helpers`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/lib/helpers): Helper functions
+- [`src/types`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/types): Shared type declarations (PascalCase, no Type suffix: User, SiteConfig)
+- [`src/data`](https://github.com/virastack/nextjs-boilerplate/tree/main/src/data): Static sample data
 

@@ -47,7 +47,7 @@ export function Dashboard() {
       <div className="flex items-center justify-center gap-4">
         <Button variant="outline" size="sm" asChild>
           <Link
-            href="https://vercel.com/new/clone?repository-url=https://github.com/omergulcicek/nizam"
+            href="https://vercel.com/new/clone?repository-url=https://github.com/virastack/nextjs-boilerplate"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -57,7 +57,7 @@ export function Dashboard() {
         </Button>
         <Button variant="outline" size="sm" asChild>
           <Link
-            href="https://github.com/omergulcicek/nizam/generate"
+            href="https://github.com/virastack/nextjs-boilerplate/generate"
             target="_blank"
             rel="noopener noreferrer"
           >
