@@ -1,12 +1,20 @@
 {
-  "name": "nizam",
-  "version": "16.0.0",
-  "private": true,
+  "name": "@virastack/nextjs-boilerplate",
+  "version": "1.0.0",
   "description": "Production-ready Next.js 16+ starter built with Tailwind CSS 4 and TypeScript.",
   "author": {
-    "name": "Ömer Gülçiçek",
+    "name": "Ömer Gülçiçek (ViraStack)",
     "email": "iletisim@omergulcicek.com",
     "url": "https://omergulcicek.com"
+  },
+  "license": "MIT",
+  "homepage": "https://virastack.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/virastack/nextjs-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/virastack/nextjs-boilerplate/issues"
   },
   "engines": {
     "node": "22.x"
@@ -37,6 +45,27 @@
       "prettier --write"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "keywords": [
+    "virastack",
+    "nextjs-boilerplate",
+    "nextjs-starter",
+    "react-boilerplate",
+    "fullstack-template",
+    "react",
+    "nextjs",
+    "cursor-rules",
+    "clean-architecture",
+    "typescript",
+    "tantack-query",
+    "tailwindcss",
+    "shadcn-ui",
+    "dx"
+  ],
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@next/bundle-analyzer": "^16.0.1",
@@ -97,32 +126,5 @@
     "tailwindcss": "^4",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5"
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/omergulcicek/nizam.git"
-  },
-  "homepage": "https://github.com/omergulcicek/nizam",
-  "bugs": {
-    "url": "https://github.com/omergulcicek/nizam/issues"
-  },
-  "license": "MIT",
-  "keywords": [
-    "nextjs",
-    "nextjs16",
-    "boilerplate",
-    "starter",
-    "template",
-    "typescript",
-    "react",
-    "tailwindcss",
-    "shadcn",
-    "framework",
-    "nizam"
-  ]
+  }
 }

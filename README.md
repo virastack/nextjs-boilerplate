@@ -1,15 +1,23 @@
-# Nizam — A Modern Next.js 16 Boilerplate
+<div align="center">
+  <img src="./public/hero.jpg" alt="Vira Stack Next.js Boilerplate" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/TanStack_Query-FF4154?logo=reactquery&logoColor=white" alt="TanStack Query" />
+  <img src="https://img.shields.io/badge/Zustand-3B82F6?logo=react&logoColor=white" alt="Zustand" />
+</div>
+
+<br />
+
+# ViraStack Next.js Boilerplate
 
 A production-ready **Next.js 16** boilerplate designed for scalability, performance, and developer happiness.
-
-> **Nizam** is a Turkish word that means _"structure, organization, and harmony.”_
-
-![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
-![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?logo=reactquery&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-3B82F6?logo=react&logoColor=white)
 
 ## Features
 
@@ -32,22 +40,22 @@ A production-ready **Next.js 16** boilerplate designed for scalability, performa
 - Absolute Imports using `@` prefix
 - Lighthouse Score: `100`
 
-## Built with Kaide
+## Built with @virastack/ai-rules
 
-Nizam is designed and powered by [Kaide](https://github.com/omergulcicek/kaide), an AI-native architecture kit for modern React. The governance layer that ships with Nizam—`.cursor/rules`, `docs/`, and `AGENTS.md`—is derived from Kaide and is included by default; no extra setup is required. For the upstream project, updates, or to use Kaide in other codebases, see the [Kaide repository](https://github.com/omergulcicek/kaide).
+This boilerplate is designed and powered by [@virastack/ai-rules](https://github.com/virastack/ai-rules), an AI-native architecture kit for modern React. The governance layer that ships with this boilerplate—`.cursor/rules`, `docs/`, and `AGENTS.md`—is derived from `@virastack/ai-rules` and is included by default; no extra setup is required.
 
 ## AI-Ready Architecture
 
-Nizam is fully aligned with 2026 AI-driven development standards. It is built on [Kaide](https://github.com/omergulcicek/kaide) (see **Built with Kaide** above). So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
+This boilerplate is fully aligned with 2026 AI-driven development standards. It is built on [@virastack/ai-rules](https://github.com/virastack/ai-rules) (see **Built with @virastack/ai-rules** above). So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
 
 - **llms.txt & llms-full.txt**: These files live in the `/public` directory and provide LLMs with high-quality context about the project’s architecture and tech stack.
-- **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Nizam’s architectural conventions stay consistent.
+- **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, the project's architectural conventions stay consistent.
 
 ## Why No Auth or Testing?
 
-Nizam aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit Auth and Testing layers:
+This boilerplate aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit Auth and Testing layers:
 
-- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.) or Testing (Vitest, Playwright). Nizam does not lock you into one choice; it gives you a clean foundation.
+- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.) or Testing (Vitest, Playwright). This boilerplate does not lock you into one choice; it gives you a clean foundation.
 - **Zero bloat**: The project stays lean and avoids dependencies you may never use.
 - **Fast start**: Skip unnecessary setup and focus on business logic from day one.
 
@@ -62,7 +70,7 @@ To run this project locally, follow the steps below.
 ### Installation
 
 ```bash
-git clone --depth=1 https://github.com/omergulcicek/nizam my-project
+git clone --depth=1 https://github.com/virastack/nextjs-boilerplate my-project
 cd my-project
 npm install
 npm run dev
@@ -219,10 +227,22 @@ npm run commit
 
 Benefits include automatic release notes and semantic versioning based on commit types.
 
+## Explore the ViraStack Ecosystem
+
+- [**AI Rules**](https://github.com/virastack/ai-rules) – Standardized AI rules for consistent code generation
+- [**Next.js Boilerplate**](https://github.com/virastack/nextjs-boilerplate) – Full-featured, scalable Next.js starter kit
+- [**Input Mask**](https://github.com/virastack/input-mask) – Lightweight, zero-dependency input masking library
+- [**Password Toggle**](https://github.com/virastack/password-toggle) – Accessible, headless password visibility component
+
+... and more at [**virastack.com**](https://virastack.com)
+
 ---
 
-Created by [Ömer Gülçiçek](https://github.com/omergulcicek)
-
-> If you find this project useful, please consider giving it a ⭐. Issues and PRs are welcome.
->
-> Support: [Sponsor on GitHub](https://github.com/sponsors/omergulcicek) or <a href="mailto:iletisim@omergulcicek.com">iletisim@omergulcicek.com</a>
+<div align="center">
+  <p>Built with precision by <a href="https://omergulcicek.com"><b>Ömer Gülçiçek</b></a></p>
+  <p>
+    <a href="https://github.com/omergulcicek">
+      <img src="https://img.shields.io/github/followers/omergulcicek?label=Follow&style=social" alt="Follow Ömer Gülçiçek" />
+    </a>
+  </p>
+</div>
