@@ -233,6 +233,7 @@ Benefits include automatic release notes and semantic versioning based on commit
 - [**Next.js Boilerplate**](https://github.com/virastack/nextjs-boilerplate) – Full-featured, scalable Next.js starter kit
 - [**Input Mask**](https://github.com/virastack/input-mask) – Lightweight, zero-dependency input masking library
 - [**Password Toggle**](https://github.com/virastack/password-toggle) – Accessible, headless password visibility component
+- [**Modern Web in 3 Mins**](https://github.com/virastack/modern-web-in-3-minutes) – Learn the standards of modern web development in 3 minutes.
 
 ... and more at [**virastack.com**](https://virastack.com)
 
